@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en" data-build="public">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nila Gao, Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="amb" aria-hidden="true"><div class="blob k1"></div><div class="blob k2"></div><div class="blob k3"></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="spark" id="spark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1.6c.65 5.7 4.7 9.75 10.4 10.4-5.7.65-9.75 4.7-10.4 10.4-.65-5.7-4.7-9.75-10.4-10.4C7.3 11.35 11.35 7.3 12 1.6z"/></svg></div>
+
+<header class="site-head">
+  <div class="site-head-in">
+    <a class="logo" href="#" id="logo">Nila Gao</a>
+    <nav class="site-nav">
+      <button id="nav-all" type="button">All projects</button>
+      <a class="hide-s" href="#playground" id="nav-pg">Playground</a>
+      <a href="#about" id="nav-about">About</a>
+      <a href="https://docs.google.com/document/d/1xMYgFVV8WB2Wj24K4v6swgLmBFmVYXQ8/edit" target="_blank" rel="noopener">Resume ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="view on" id="v-home">
+<main class="home">
+  <div class="hero">
+    <h1 class="h1" id="h1" aria-label="Hey, I'm Nila"></h1>
+    <p class="sub" id="sub" aria-label="I design the AI experience @ Klaviyo. I like making models feel intuitive, trustworthy, and a little bit human."></p>
+  </div>
+
+  <p class="sr-only" id="ans-live" aria-live="polite"></p>
+  <div class="box" id="box">
+    <form class="q" id="qform" autocomplete="off" role="search">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6c.65 5.7 4.7 9.75 10.4 10.4-5.7.65-9.75 4.7-10.4 10.4-.65-5.7-4.7-9.75-10.4-10.4C7.3 11.35 11.35 7.3 12 1.6z"/></svg>
+      <input id="q" type="text" placeholder="Ask about my work, or search projects" aria-label="Ask about Nila's work, or search projects" aria-controls="res">
+      <button class="clr" id="clr" type="button" hidden>Clear</button>
+      <kbd id="kbd">⌘K</kbd>
+      <span class="press-hint" aria-hidden="true">Press ↵ to ask</span>
+      <button class="go" id="go" type="submit" aria-label="Ask" disabled><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"/></svg></button>
+    </form>
+    <div class="chips" id="chips"></div>
+    <div class="ans" id="ans"></div>
+    <div class="res" id="res" role="listbox" aria-label="Projects"></div>
+    <div class="ans-next" id="ans-next"></div>
+    
+  </div>
+  <section class="more" id="more" aria-labelledby="more-h">
+    <div class="more-head"><h2 id="more-h">More work</h2><span id="more-n"></span></div>
+    <div class="res more-list" id="more-list" role="listbox" aria-label="More work"></div>
+  </section>
+</main>
+<div class="footer">Nila Gao · Product Designer, Personalization · © 2026</div>
+</div>
+
+<div class="view" id="v-all"><main class="page-main"><div class="page" id="all-body"></div></main><div class="footer">Nila Gao · Product Designer, Personalization · © 2026</div></div>
+<div class="view" id="v-cs"><main class="page-main"><article class="page" id="cs-body"></article></main><div class="footer">Nila Gao · Product Designer, Personalization · © 2026</div></div>
+
+
+<template id="cs-send-time">
+<article class="dd st">
+  <header class="dd-hero">
+    <div class="cs-eyebrow">Case study · Klaviyo · Product designer · 2025–26</div>
+    <h1 class="cs-h1">Personalized Send Time</h1>
+    <p class="body cs-sub">Every message lands at each person’s best hour. Marketers set the window, Klaviyo picks the moment, and a control group shows whether it worked.</p>
+  </header>
+  <div class="dd-stage lx-stage" aria-label="The Klaviyo scheduler with Personalized send time selected, spreading sends across each person’s best hour">
+    <div class="lx st-lx" id="st-hero">
+      <div class="lx-screen"><div class="lx-app st-app">
+        <div class="lx-top"><span class="lx-back"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lx-crumb"><b>Fall drop</b> / Email</span><span class="lx-btns"><i>Back</i><i class="dk">Schedule</i></span></div>
+        <div class="st-body">
+          <div class="st-modal">
+            <div class="st-mh"><b>Schedule or send campaign</b><span>×</span></div>
+            <div class="st-mb">
+              <div class="st-tiles"><div class="on"><b>Schedule</b><small>Pick a future time</small></div><div><b>Send now</b><small>Start immediately</small></div></div>
+              <label>Send date</label><div class="st-in">Thu, Dec 4</div>
+              <label>Sending type</label>
+              <div class="st-dd"><button type="button" class="st-in st-sel" data-st-sel><span data-st-type>Fixed send time</span></button>
+                <div class="st-menu" data-st-menu>
+                  <button type="button" data-st-opt="fixed">Fixed send time<small>Send at a specific date and time</small></button>
+                  <button type="button" data-st-opt="gradual">Gradual send<small>Send over several hours</small></button>
+                  <button type="button" data-st-opt="sst">Smart Send Time<small>One best hour for the whole list</small></button>
+                  <button type="button" data-st-opt="pst" class="pst"><span>Personalized send time <em class="st-pb"><svg viewBox="0 0 16 16" width="9" height="9" style="vertical-align:-1px;margin-right:3px"><path d="M9 1.5 3.5 9H8l-1 5.5L12.5 7H8z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/></svg>Personalized</em></span><small>Send when each person is most likely to engage</small></button>
+                </div>
+              </div>
+              <div class="st-fixed"><label>Time</label><div class="st-in">8:00 AM <small>Recipient’s local time</small></div></div>
+              <div class="st-pst">
+                <label>Sending window</label><div class="st-win"><div class="st-in">11:00 AM</div><span>–</span><div class="st-in">8:00 PM</div></div>
+                <p class="st-hint">The widest window allowed, respecting quiet hours.</p>
+                <label>Control send time</label><div class="st-in st-sel">Historical send time <em>Recommended</em></div>
+              </div>
+            </div>
+            <div class="st-mf"><i>Cancel</i><i class="dk">Schedule</i></div>
+          </div>
+          <div class="st-del">
+            <div class="st-dh"><b>Delivery</b><span data-st-cap>Everyone at 8:00 AM</span></div>
+            <div class="st-chart" data-st-chart="hero"><i class="st-wband" style="--a:11;--b:20"></i></div>
+            <div class="st-ax"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
+          </div>
+        </div>
+        <span class="lx-cursor" aria-hidden="true"><svg viewBox="0 0 16 16" width="18" height="18"><path d="M2 1.5v12l3.4-3.2 2.4 5 2-1-2.4-5H12z" fill="#2A2029" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/></svg></span>
+      </div></div>
+      <div class="lx-base"></div>
+    </div>
+  </div>
+  <div class="dd-tldr in-hero" role="list">
+    <div role="listitem"><span>Problem</span><b>One send time for the whole list</b></div>
+    <div role="listitem"><span>Solution</span><b>A send window, a per-person hour, and lift you can check</b></div>
+    <div role="listitem"><span>Impact</span><b>+2.97% email clicks across 1.8B+ messages</b><small data-basis="relative" data-fig="send-time">relative lift</small></div>
+  </div>
+  <div class="cs-proc"></div>
+
+  <section class="band tint" data-chap="1" data-s="Problem" data-d="One send time for everyone">
+    <div class="head"><p class="lbl">01 · Problem</p><h2 class="h2">Every way to send treated the list as <em>one</em> audience.</h2><p class="body">Whatever their time zone or habits, everyone got the same moment.</p></div>
+    <div class="cs-b st-pq"><div class="st-now"><div class="k-card st-now-c"><div class="k-head">Schedule or send campaign</div><div class="k-body">
+      <p class="st-now-l">Sending type</p><div class="k-row"><span class="k-in sel">Fixed send time ▾</span></div>
+      <div class="k-menu"><div class="k-opt on"><b>Fixed send time</b><small>Send at a specific date and time</small><i>✓</i></div><div class="k-opt"><b>Gradual send</b><small>Send over several hours</small><i></i></div><div class="k-opt"><b>Smart Send Time</b><small>One best hour for the whole list</small><i></i></div></div>
+    </div></div></div><blockquote class="st-q"><p>“We were sending everything at a hard 8 a.m. Like, what time is that in the U.K.?”</p><cite>Marketing lead · DTC brand · Customer call</cite></blockquote></div>
+    <div class="cs-b dd-biz-w"><p class="lbl">Why it mattered</p>
+      <div class="dd-biz">
+        <div><b>+0.7%</b><p>Projected sitewide revenue, in the PRD sizing</p></div>
+        <div><b>FY26</b><p>Anchor of the new Marketing Analytics package</p></div>
+        <div><b>2</b><p>Competitors already sold it: Braze and Attentive</p></div>
+        <div><b>1:1</b><p>Data science could now predict a best hour per person</p></div>
+      </div></div>
+  </section>
+
+  <section class="band hmw" aria-label="How might we">
+    <p class="lbl">How might we</p>
+    <p class="hmw-q">Send each message when each person is most likely to engage, without taking control away from marketers?</p>
+
+  </section>
+
+  <section class="ch" data-chap="2" data-s="Concepts" data-d="Three ways to hand off timing">
+    <div class="head"><p class="lbl">02 · Concepts</p><h2 class="h2">Prototyping three <em>concepts</em>.</h2><p class="body">Each gave the marketer a different amount of control, from a recommendation to a toggle on today’s scheduler.</p></div>
+    <div class="cs-b"><div class="dd-tabs wf" data-tg="concepts"><div class="dt-nav" role="tablist">
+      <button type="button" class="on" data-t="0"><i>01</i><span><b>Recommended mode</b><small>Pick a mode, see the model’s reasoning</small></span></button>
+      <button type="button" data-t="1"><i>02</i><span><b>New send type</b><small>“Optimal sending hours,” with a window</small></span></button>
+      <button type="button" data-t="2"><i>03</i><span><b>Beta toggle</b><small>Turn it on at the top of the scheduler</small></span></button>
+    </div><div class="dt-panes">
+      <div class="dt-p on" data-p="0"><div class="ui"><div class="st-m">
+        <div class="st-mh"><b>Schedule or send campaign</b><span>×</span></div>
+        <div class="st-mb"><label>Send date</label><div class="st-in">Thu, Dec 4</div>
+          <div class="st-radio on"><i></i><div><b>Maximize recipient engagement <em>Recommended</em></b><small>Send at the optimal time for each recipient over 24 hrs</small></div></div>
+          <div class="st-radio"><i></i><div><b>Follow your typical sending hours</b><small>Send only between 8:00 AM – 2:00 PM</small></div></div>
+          <p class="st-ct">Recipient preference by hour</p>
+          <div class="st-bars"><i style="--h:12"></i><i style="--h:8"></i><i style="--h:6"></i><i style="--h:5"></i><i style="--h:6"></i><i style="--h:10"></i><i style="--h:22"></i><i style="--h:38"></i><i style="--h:52"></i><i style="--h:60" class="on"></i><i style="--h:58" class="on"></i><i style="--h:64" class="on"></i><i style="--h:70" class="on"></i><i style="--h:62" class="on"></i><i style="--h:55"></i><i style="--h:50"></i><i style="--h:56"></i><i style="--h:66"></i><i style="--h:78"></i><i style="--h:82"></i><i style="--h:70"></i><i style="--h:48"></i><i style="--h:30"></i><i style="--h:18"></i></div>
+          <div class="st-bax"><span>12 AM</span><span>12 PM</span><span>12 AM</span></div>
+        </div></div></div></div>
+      <div class="dt-p" data-p="1"><div class="ui"><div class="st-m">
+        <div class="st-mh"><b>Schedule or send campaign</b><span>×</span></div>
+        <div class="st-mb"><div class="st-tiles"><div class="on"><b>Schedule ahead</b></div><div><b>Send now</b></div></div>
+          <label>Type</label><div class="st-in st-sel"><span>✦ Optimal sending hours</span></div>
+          <div class="st-set"><b>Optimal send settings</b><small>Window of accepted hours used to find the optimal time per recipient, in their local time.</small>
+            <div class="st-win"><div class="st-in">9:00 AM</div><span>–</span><div class="st-in">8:00 PM</div></div></div>
+        </div></div></div></div>
+      <div class="dt-p" data-p="2"><div class="ui"><div class="st-m">
+        <div class="st-bn"><div><b>Optimal sending hours <em>Beta</em></b><small>Send campaigns at the best time to maximize engagement.</small></div><i class="st-sw"></i></div>
+        <div class="st-mb"><div class="st-tiles"><div class="on"><b>Schedule</b><small>Choose a future date and time</small></div><div><b>Send now</b><small>Start sending immediately</small></div></div>
+          <label>Send date</label><div class="st-in">Thu, Dec 4</div>
+          <label>Sending type</label><div class="st-in st-sel">Fixed send time</div>
+          <div class="st-win2"><div><label>Time</label><div class="st-in">--:--</div></div><div><label>Time zone</label><div class="st-in st-sel">Recipient’s local time zone</div></div></div>
+        </div></div></div></div>
+    </div></div></div>
+  </section>
+
+  <section class="band paper" data-chap="3" data-s="Research" data-d="Five marketers, three concepts">
+    <div class="head"><p class="lbl">03 · Research</p><h2 class="h2">Usability tests with 5 <em>marketers</em>.</h2><p class="body">One question across all three concepts: what did they expect Klaviyo to decide?</p></div>
+    <div class="cs-b"><div class="cs-ins dd-ins2 st-ins3">
+      <div><small>Recommended mode</small><p><b>Loved the recommendation, not the chart.</b><span>Keep the recommendation, drop the reasoning chart.</span></p></div>
+      <div><small>New send type</small><p><b>They expected Klaviyo to pick the time.</b><span>Make the window optional.</span></p></div>
+      <div><small>Beta toggle</small><p><b>“I didn’t know this existed.”</b><span>Move it into the send type.</span></p></div>
+    </div></div>
+    <div class="cs-b st-ba" data-st-ba>
+      <p class="h3 cs-subh">From choosing a time to defining a window</p><p class="body dd-sub">The marketer owns the boundaries. The model picks each person’s hour inside them.</p>
+      <div class="st-seg" role="tablist"><button type="button" class="on" data-ba="before">Before · pick one time</button><button type="button" data-ba="after">After · define a window</button></div>
+      <div class="st-chart big" data-st-chart="ba"><i class="st-wband" style="--a:11;--b:20"><span>Marketer’s window · 11 AM – 8 PM</span></i></div>
+      <div class="st-ax"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
+      <div class="st-who"><div><small>Marketer decides</small><b data-ba-m>One hour, for every recipient</b></div><div><small>Model decides</small><b data-ba-d>Nothing</b></div></div>
+    </div>
+  </section>
+
+  <section class="ch" data-chap="4" data-s="Trust" data-d="Telling the data story">
+    <div class="head"><p class="lbl">04 · Trust</p><h2 class="h2">Telling the data <em>story</em>.</h2><p class="body">Beta launched to 85 companies. The first report led with one big number, and customers asked: compared to what? Most of the design came from working out how the data should tell its story.</p></div>
+    <div class="cs-b"><figure class="st-wall"><img src="iterations-wall.jpg" alt="A wall of report explorations: campaign overviews, deliverability pages, lift panels and hourly charts" loading="lazy"><figcaption class="cap">Dozens of report explorations, across campaign overview, deliverability and a full lift view.</figcaption></figure></div>
+    <div class="cs-b"><blockquote class="st-q"><p>“I don’t need you to tell me again that it works and break up all my data.”</p><cite>Marketing lead · DTC brand · Beta feedback</cite></blockquote></div>
+    <div class="cs-b">
+      <p class="h3 cs-subh">Is the lift real, or just noise?</p><p class="body dd-sub">A few campaigns can swing either way by chance. Each result shows a range of likely lift. If the whole range sits above zero, the lift is unlikely to be chance (95% interval).</p>
+      <div class="st-sig3">
+        <div><small>Significant</small><b>+8.0%</b><div class="ci" style="--a:56%;--b:94%;--p:75%"><i class="z"></i><s></s><em></em></div><p>The whole range sits above zero. Safe to act on.</p></div>
+        <div><small>Approaching</small><b>+3.1%</b><div class="ci" style="--a:22%;--b:67%;--p:44%"><i class="z"></i><s></s><em></em></div><p>Mostly above zero, but it could still be chance. Keep sending.</p></div>
+        <div><small>Not significant</small><b>+0.4%</b><div class="ci" style="--a:2.5%;--b:52.5%;--p:27.5%"><i class="z"></i><s></s><em></em></div><p>The range spans zero. Nothing to claim yet.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper" data-chap="5" data-s="Experiment" data-d="Banner vs. dropdown, 50/50">
+    <div class="head"><p class="lbl">05 · Experiment</p><h2 class="h2">Less prominent, more <em>adopted</em>.</h2><p class="body">Beta shipped with a banner at the top of the scheduler. After GA, we tested it against an option inside the dropdown marketers already use, 50/50 by company, built to catch a drop. I bet on the banner, and lost.</p></div>
+    <div class="cs-b"><div class="st-ab">
+      <figure><div class="st-abi"><img src="pst-banner-panel.jpg" alt="Entry point A: a toggle banner at the top of the scheduler" loading="lazy"></div><figcaption><small>A · Toggle banner · Control</small><b>Louder, but separate from the decision.</b></figcaption></figure>
+      <figure class="win"><div class="st-abi"><img src="pst-dropdown-panel.jpg" alt="Entry point B: Personalized send time inside the scheduling dropdown" loading="lazy"></div><figcaption><small>B · Inline dropdown · Winner</small><b>Found where the decision already happens.</b></figcaption></figure>
+    </div></div>
+    <div class="cs-b"><div class="st-lift"><b>17.5% <span>→</span> 20.7%</b><p>Eligible companies using it. The dropdown shipped to everyone in May 2026.</p></div></div>
+  </section>
+
+  <section class="band ink" data-chap="6" data-s="Solution" data-d="Set up, baseline, results">
+    <div class="head"><p class="lbl">06 · Solution</p><h2 class="h2">One window, and a system that <em>holds up</em>.</h2><p class="body">Three moments in the product: turning it on, choosing what it’s compared to, and seeing whether it worked.</p></div>
+    <div class="cs-b sx" data-sx>
+      <div class="pt-tabs sx-tabs" role="tablist" style="grid-template-columns:repeat(3,1fr); max-width:none">
+        <button type="button" class="on" data-sxt="0" role="tab" aria-selected="true"><b>01 · Set up</b><small>Pick Personalized send time and set a window. Each person gets their best hour inside it, with time zones and SMS quiet hours handled.</small></button>
+        <button type="button" data-sxt="1" role="tab" aria-selected="false"><b>02 · Baseline</b><small>Choose what it’s compared to, once per account. Override it on a campaign only when the control would fall outside the window.</small></button>
+        <button type="button" data-sxt="2" role="tab" aria-selected="false"><b>03 · Results</b><small>One full-page view of the lift, with both rates for every metric and how it holds up as volume grows.</small></button>
+      </div>
+      <div class="sx-screen">
+        <img class="on" data-sxi="0" src="setup-pst.jpg" alt="Schedule drawer with Personalized send time, a sending window and prediction training" loading="lazy">
+        <img data-sxi="1" src="pst-global-controls.jpg" alt="Account setting for the default control send time" loading="lazy">
+        <img data-sxi="2" src="perf-takeover.jpg" alt="Personalized send time results: total lift, both rates for every metric, and lift as volume grows" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="ch outcome" data-chap="7" data-s="Outcome" data-d="Live in campaigns since Jan 2026">
+    <div class="head"><p class="lbl">07 · Outcome</p><h2 class="h2">Live in campaigns since <em>January 2026</em>.</h2></div>
+    <div class="cs-b"><div class="dd-stats st-stats"><div><b>21%</b><span>Of eligible companies at GA, about 940</span></div><div><b>+18%</b><span>Relative adoption from the entry-point test</span></div><div><b>+2.97%</b><span>Email click rate, across 1.8B+ messages</span><small data-basis="relative" data-fig="send-time">relative lift</small></div><div><b>+6.25%</b><span>Push placed-order rate, against control</span></div></div></div>
+    <div class="cs-b"><p class="st-ref"><small>The limit</small>Under 50K emailable profiles, results are a coin flip. The analytics only claim what the data supports.</p></div>
+    <div class="cs-b"><p class="st-ref"><small>What I took from it</small>Designing AI is deciding what people control, what the system handles, and how everyone can tell it worked.</p></div>
+  </section>
+</article>
+</template>
+
+<template id="cs-audience">
+<article class="dd st ao">
+  <header class="dd-hero">
+    <div class="cs-eyebrow">Case study · Klaviyo · Product designer · 2026</div>
+    <h1 class="cs-h1">Audience Optimization</h1>
+    <p class="body cs-sub">An AI model decides who gets each campaign: it skips people likely to unsubscribe and adds people likely to buy. I designed how marketers come to trust it.</p>
+  </header>
+  <div class="dd-stage lx-stage" aria-label="The campaign audience step with Audience optimization turned on">
+    <div class="lx st-lx" id="ao-hero">
+      <div class="lx-screen"><div class="lx-app st-app">
+        <div class="lx-top"><span class="lx-back"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lx-crumb"><b>Spring restock</b> / Audience</span><span class="lx-btns"><i>Back</i><i class="dk">Save and continue</i></span></div>
+        <div class="st-body ao-body">
+          <div class="st-modal">
+            <div class="st-mh"><b>Send to</b><span></span></div>
+            <div class="st-mb">
+              <label>Lists and segments</label><div class="st-in st-sel">Engaged, last 90 days</div>
+              <label>Don’t send to</label><div class="st-in st-sel">Suppressed profiles</div>
+              <div class="ao-sec"><div class="ao-sh"><b>Audience optimization</b><span class="ao-pill">✦ Personalized</span></div>
+                <div class="ao-tg" data-ao-k="skip"><div><b>Skip likely unsubscribers</b><small>Klaviyo skips <u>~480 profiles</u> predicted to unsubscribe.</small></div><button type="button" class="ao-sw" aria-label="Skip likely unsubscribers" data-ao-tg="skip"><i></i></button></div>
+                <div class="ao-tg" data-ao-k="add"><div><b>Add likely buyers <em>Beta</em></b><small>Klaviyo adds <u>~12,000 profiles</u> likely to engage, never more than 20%.</small></div><button type="button" class="ao-sw" aria-label="Add likely buyers" data-ao-tg="add"><i></i></button></div>
+              </div>
+              <div class="ao-tg ss"><div><b>Smart Sending</b><small>Skip anyone who got a message in the last 16 hours.</small></div><i class="ao-sw on"><i></i></i></div>
+            </div>
+          </div>
+          <div class="st-del ao-sum">
+            <div class="st-dh"><b>Estimated recipients</b><span>30% held back to measure lift</span></div>
+            <p class="ao-big" data-ao-total>120,000</p>
+            <div class="ao-rows">
+              <div><span>Audience</span><b>120,000</b></div>
+              <div data-ao-r="skip"><span>Skipped, likely to unsubscribe</span><b>−480</b></div>
+              <div data-ao-r="add"><span>Added, likely to buy</span><b>+12,000</b></div>
+            </div>
+            <div class="ao-bar"><i class="a"></i><i class="s" data-ao-b="skip"></i><i class="p" data-ao-b="add"></i></div>
+            <div class="ao-imp" data-ao-imp>
+              <div class="ao-imh"><small>Impact so far · last 90 days</small><b>−1.4% <span>unsubscribe rate vs held back</span></b></div>
+              <svg viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="69" x2="300" y2="69" stroke="#E6E7EA"/><path class="hb" d="M0 30 L27 34 L54 28 L82 33 L109 30 L136 35 L164 29 L191 32 L218 30 L245 33 L273 29 L300 31" fill="none" stroke="#B9BCC4" stroke-width="1.6" stroke-dasharray="3 3"/><path class="op" d="M0 31 L27 37 L54 33 L82 40 L109 38 L136 44 L164 41 L191 46 L218 45 L245 49 L273 47 L300 51" fill="none" stroke="#9C6B14" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="ao-il"><span><i class="op"></i>Optimized</span><span><i class="hb"></i>Held back</span><span>12 campaigns</span><span>Illustrative data</span></div>
+            </div>
+          </div>
+        </div>
+        <span class="lx-cursor" aria-hidden="true"><svg viewBox="0 0 16 16" width="18" height="18"><path d="M2 1.5v12l3.4-3.2 2.4 5 2-1-2.4-5H12z" fill="#2A2029" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/></svg></span>
+      </div></div>
+      <div class="lx-base"></div>
+    </div>
+  </div>
+  <div class="dd-tldr in-hero" role="list">
+    <div role="listitem"><span>Problem</span><b>Grow revenue and reach without hurting the list</b></div>
+    <div role="listitem"><span>Solution</span><b>A model that intelligently adds and removes recipients</b></div>
+    <div role="listitem"><span>Impact</span><b>28.9% adoption: 2,250 of 7,781 paying accounts, June 2026 · −2.55% unsubscribes in a replay against historical sends, 1-week window</b></div>
+  </div>
+  <div class="cs-proc"></div>
+
+  <section class="band tint" data-chap="1" data-s="Problem" data-d="Grow revenue, protect the list">
+    <div class="head"><p class="lbl">01 · Problem</p><h2 class="h2">Every send reached people about to <em>leave</em>, and missed people likely to buy.</h2><p class="body">Marketers couldn’t fix one without risking the other.</p></div>
+    <div class="cs-b st-pv" data-ao-people>
+      <div class="ao-tr">
+        <div class="ao-ppl" data-ps-grid></div>
+        <div class="ao-mt3">
+          <div><span>Unsubscribe risk</span><b><em>High</em> → Low</b></div>
+          <div><span>Reach</span><b><em>120,000</em> → 131,520</b></div>
+        </div>
+      </div>
+      <div class="ao-leg"><span><i class="k"></i>Your list</span><span><i class="x"></i>Removed: likely to unsubscribe</span><span><i class="p"></i>Added: likely to buy</span></div>
+    </div>
+    <div class="cs-b dd-biz-w"><p class="lbl">Why it mattered</p>
+      <div class="dd-biz">
+        <div><b>1–3%</b><p>Fewer unsubscribes on lists over 10K</p></div>
+        <div><b>2</b><p>Competitors already adding likely buyers</p></div>
+        <div><b>Paid</b><p>Anchors the Marketing Analytics package</p></div>
+      </div></div>
+  </section>
+
+  <section class="band hmw" aria-label="How might we">
+    <p class="lbl">How might we</p>
+    <p class="hmw-q">Help marketers send to fewer of the wrong people and more of the right ones, and see that it worked?</p>
+  </section>
+
+  <section class="band paper" data-chap="2" data-s="Research" data-d="What customers trust">
+    <div class="head"><p class="lbl">02 · Research</p><h2 class="h2">What <em>trustworthy</em> AI measurement looks like.</h2><p class="body">I showed 6 customers the same result three ways. They only trusted it next to the held-back group. That became the rule for every number, along with keeping early signals apart from proven results.</p></div>
+    <div class="cs-b st-pv" data-ao-fmt>
+      <div class="st-seg" role="tablist"><button type="button" class="on" data-f="0">Lift only</button><button type="button" data-f="1">Percentage points</button><button type="button" data-f="2">Both rates</button></div>
+      <div class="ao-fmt">
+        <div class="ao-kc" data-f-card>
+          <div class="ao-kch">Audience optimization · Illustrative data</div>
+          <div class="ao-kcm">
+            <div><div class="v" data-f-v>−1.9%</div><div class="l">Unsubscribe rate change <i class="ok"></i></div><div class="rr" data-f-r><span>Personalized group rate: 0.118%</span><span>Control group rate: 0.120%</span></div></div>
+            <div class="mute"><div class="v" data-f-v2>+0.4%</div><div class="l">Placed order rate lift <i></i></div><div class="rr"><span>Personalized group rate: 0.018%</span><span>Control group rate: 0.018%</span></div></div>
+          </div>
+        </div>
+        <div class="ao-said"><small>What they said</small><p data-f-q>“Compared to what?”</p><b data-f-k>Not trusted</b></div>
+      </div>
+    </div>
+    <div class="cs-b"><div class="cs-ins dd-ins2"><div><small>Takeaway 01</small><p><b>Show both rates.</b>A number was only trusted next to the held-back group’s rate.</p></div><div><small>Takeaway 02</small><p><b>Badge what’s significant.</b>A clear mark said which results were real, and which were still noise.</p></div></div></div>
+  </section>
+
+  <section class="band ink ao-solk tl" data-chap="3" data-s="Solution" data-d="Protect, prove, expand, learn">
+    <div class="head"><p class="lbl">03 · Solution</p></div>
+    <div class="cs-b pt-tabs ao-tabs" role="tablist" aria-label="Release cycles"><button type="button" role="tab" data-aot="Protect" class="on" aria-selected="true"><b>01 · Protect</b><small><span class="ao-dt">Jan–Mar 2026</span></small></button><button type="button" role="tab" data-aot="Prove" aria-selected="false"><b>02 · Prove</b><small><span class="ao-dt">Jun–Aug 2026</span></small></button><button type="button" role="tab" data-aot="Expand" aria-selected="false"><b>03 · Expand</b><small><span class="ao-dt">Aug–Oct 2026</span></small></button><button type="button" role="tab" data-aot="Learn" aria-selected="false"><b>04 · Learn</b><small><span class="ao-dt">Aug–Nov 2026</span></small></button></div>
+    <div class="ao-actb on" data-act="Protect"><div class="ao-ph"><h3 class="h2">Skip the people likely to leave.</h3><p class="body">One opt-in toggle in the audience step, right next to Smart Sending.</p></div><div class="cs-b"><div class="lx ao-lx"><div class="lx-screen"><div class="lx-app ao-app"><img src="setup-2-beta-on.jpg" alt="Audience step in the campaign builder: Audience optimization toggle on, next to Smart Sending" loading="lazy"></div></div><div class="lx-base"></div></div></div></div>
+    <div class="ao-actb" data-act="Prove"><div class="ao-ph"><h3 class="h2">Prove it worked, with both rates.</h3><p class="body">Every number sits next to the held-back group’s rate, with a mark when it’s significant.</p></div><div class="cs-b"><div class="lx ao-lx"><div class="lx-screen"><div class="lx-app ao-app"><img src="ao-results.jpg" alt="Campaign results: profiles removed, unsubscribe change with both group rates and a significance tooltip" loading="lazy"></div></div><div class="lx-base"></div></div></div></div>
+    <div class="ao-actb" data-act="Expand"><div class="ao-ph"><h3 class="h2">Add the people likely to buy.</h3><p class="body">Two toggles now: Skip likely unsubscribers, and Add likely buyers, each with a count.</p></div><div class="cs-b"><div class="lx ao-lx"><div class="lx-screen"><div class="lx-app ao-app"><img src="ao-setup.jpg" alt="Edit audience: Skip and Add toggles, each with a profile count" loading="lazy"></div></div><div class="lx-base"></div></div></div></div>
+    <div class="ao-actb" data-act="Learn"><div class="ao-ph"><h3 class="h2">Show progress without claiming proof.</h3><p class="body">Three states say how far along the results are.</p></div><div class="cs-b"><div class="ao-matw" data-ao-mat>
+      <div class="st-seg" role="tablist"><button type="button" class="on" data-m="0">L1 · Not started</button><button type="button" data-m="1">L2 · Estimating</button><button type="button" data-m="2">L3 · Measured</button></div>
+      <div class="ao-mat">
+        <div class="ao-mc" data-mc="0">
+          <div class="ao-mch"><b>Audience optimization</b><span class="ao-pill">Not started</span></div>
+          <p class="ao-mbig">Turn it on in your next campaign</p>
+          <p class="ao-mtx">30% is held back so you can see the difference.</p>
+          <span class="ao-mbtn">Create campaign</span>
+        </div>
+        <div class="ao-mc" data-mc="1">
+          <div class="ao-mch"><b>Audience optimization</b><span class="ao-pill">Estimating</span></div>
+          <div class="ao-mk"><div><b>~52</b><span>Unsubscribes prevented</span></div><div><b>1,240</b><span>Profiles skipped</span></div></div>
+          <div class="ao-mp"><div class="st-pg"><i style="width:40%"></i></div><span>Lift appears once it’s reliable</span></div>
+        </div>
+        <div class="ao-mc" data-mc="2">
+          <div class="ao-mch"><b>Audience optimization</b><span class="ao-pill ok">✓ Measured</span></div>
+          <div class="ao-mk"><div><b>−1.4%</b><span>Unsubscribe rate change</span><em>Optimized vs. held back · significant</em></div><div class="mute"><b>—</b><span>Placed order rate lift</span><em>Not significant yet</em></div></div>
+          <p class="ao-mtx">Last 90 days</p>
+        </div>
+      </div>
+      <p class="cap">Illustrative data. Each campaign gets an automatic control. Windows: 30, 60 or 90 days (90 by default when there’s enough history).</p>
+      <p class="ao-shared"><b>Beyond one feature:</b> now the shared reporting model across Personalization.</p>
+    </div></div></div>
+  </section>
+
+  <section class="ch outcome" data-chap="4" data-s="Impact" data-d="Adoption and retention">
+    <div class="head"><p class="lbl">04 · Impact</p><h2 class="h2">Off by default, still chosen, and <em>fewer</em> unsubscribes.</h2></div>
+    <div class="cs-b"><div class="dd-stats st-stats ao-st3"><div><b>28.9%</b><span>Adoption: 2,250 of 7,781 paying accounts, June 2026</span></div><div><b>−2.55%</b><span>Unsubscribes in a replay against historical sends, 1-week window</span></div><div><b>−2.35%, −2.09%</b><span>The same replay at 2 and 4 weeks</span></div></div></div>
+    <div class="cs-b"><p class="st-ref"><small>Next time</small>Define when learning ends before launch, and design the empty states first.</p></div>
+  </section>
+</article>
+</template>
+
+<template id="cs-discount">
+<article class="dd">
+  <header class="dd-hero">
+    <div class="cs-eyebrow">Case study · Klaviyo · Product designer · 2026</div>
+    <h1 class="cs-h1">Discount Affinity</h1>
+    <p class="body cs-sub">Smarter discounts that protect revenue. Marketers send codes only to the customers who need one, and stop giving margin away to everyone else.</p>
+  
+  </header>
+  <div class="dd-stage lx-stage" aria-label="A Black Friday email in the Klaviyo editor, with discount affinity turned on in the coupon block">
+    <div class="lx" id="lx">
+      <div class="lx-screen"><div class="lx-app">
+        <div class="lx-top"><span class="lx-back"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M7 3H3v10h4M6 8h7M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lx-crumb"><b>Black Friday</b> / Email 1</span><span class="lx-pers"><svg viewBox="0 0 16 16" width="9" height="9" style="vertical-align:-1px;margin-right:3px"><path d="M9 1.5 3.5 9H8l-1 5.5L12.5 7H8z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/></svg>Personalized</span><span class="lx-btns"><i>Manage template ▾</i><i>Preview</i><i class="dk">Save and return</i></span></div>
+        <div class="lx-body">
+          <nav class="lx-rail" aria-hidden="true"><i class="on"><svg viewBox="0 0 16 16" width="11" height="11"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8 5v6M5 8h6" stroke="currentColor" stroke-width="1.2"/></svg></i><i><svg viewBox="0 0 16 16" width="11" height="11"><path d="M8 2a6 6 0 1 0 0 12c1 0 1.2-.8.8-1.5-.5-.8 0-1.8 1-1.8H12a2 2 0 0 0 2-2A6 6 0 0 0 8 2z" stroke="currentColor" stroke-width="1.1" fill="none"/><circle cx="5.2" cy="7" r=".9" fill="currentColor"/><circle cx="8" cy="5" r=".9" fill="currentColor"/><circle cx="10.8" cy="7" r=".9" fill="currentColor"/></svg></i></nav>
+          <aside class="lx-panel">
+            <div class="lx-ph"><span>←</span><b>Coupon</b><em></em></div>
+            <div class="lx-tabs"><i class="on">Styles</i><i>Display</i></div>
+            <div class="lx-sec"><p class="lx-h">Coupon selection</p><div class="lx-select">BF-20OFF · 20% off · ends Nov 30</div></div>
+            <div class="lx-sec lx-da">
+              <div class="lx-tg"><div><b>Discount affinity</b><span>Klaviyo scores how much each profile engages with discounts to help assign the right coupon.</span></div><button type="button" class="lx-sw" aria-label="Discount affinity" data-lx-tg><i></i></button></div>
+              <div class="lx-tiers"><div class="lx-card">
+                <div class="lx-row" data-t="deal"><div><b>Deal seeker</b><span><a>Preview</a> ~9.3K</span></div><i class="lx-dd">BF-20OFF · 20% off</i></div>
+                <div class="lx-row" data-t="occ"><div><b>Occasional deal seeker</b><span><a>Preview</a> ~6.9K</span></div><i class="lx-dd">BF-10OFF · 10% off</i></div>
+                <div class="lx-row" data-t="full"><div><b>Full price buyer</b><span><a>Preview</a> ~12.8K</span></div><i class="lx-dd">No coupon</i></div>
+              </div></div>
+            </div>
+            <div class="lx-acc"><div>Header text<svg viewBox="0 0 16 16" width="10" height="10"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></div><div>Coupon text<svg viewBox="0 0 16 16" width="10" height="10"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></div><div>Color<svg viewBox="0 0 16 16" width="10" height="10"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></div><div>Style<svg viewBox="0 0 16 16" width="10" height="10"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></div><div>Border<svg viewBox="0 0 16 16" width="10" height="10"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></div></div>
+          </aside>
+          <div class="lx-canvas">
+            <div class="lx-devc"><i class="on">▭ Desktop</i><i>▯ Mobile</i></div><div class="lx-seg" role="tablist"><button type="button" data-v="all" class="on">All recipients</button><button type="button" data-v="deal">Deal seeker</button><button type="button" data-v="occ">Occasional deal seeker</button><button type="button" data-v="full">Full price buyer</button></div>
+            <div class="lx-email">
+              <div class="lx-nav"><b>NORTHWIND</b><span>New · Women · Men · Sale</span></div>
+              <div class="lx-hero"><small>Black Friday</small><b>Our biggest sale<br>of the year.</b></div>
+              <div class="lx-cp" data-lx-cp><span class="lx-sel">Coupon</span>
+                <div class="lx-code"><small>Your code</small><b data-lx-code>BF-20OFF</b><i class="lx-badge">✦ Personalized</i></div>
+                <div class="lx-nocode"><small>No code for this customer</small><b>Shop the full-price edit</b></div>
+              </div>
+              <div class="lx-cta">Shop now</div>
+              <div class="lx-foot"></div>
+            </div>
+          </div>
+        </div>
+        <span class="lx-cursor" aria-hidden="true"><svg viewBox="0 0 16 16" width="18" height="18"><path d="M2 1.5v12l3.4-3.2 2.4 5 2-1-2.4-5H12z" fill="#2A2029" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/></svg></span>
+      </div></div>
+      <div class="lx-base"></div>
+    </div>
+  </div>
+
+  <div class="dd-tldr in-hero">
+    <div><span>Problem</span><b>One code for everyone</b></div>
+    <div><span>Solution</span><b>A customer score, and a toggle on every coupon</b></div>
+    <div><span>Impact</span><b>Live in beta with 254 companies</b></div>
+  </div>
+
+
+
+
+  <div class="cs-proc" data-proc></div>
+
+  <section class="band tint" data-chap="1" data-s="Problem" data-d="7 steps, then one code for all">
+    <div class="head"><p class="lbl">01 · Problem</p><h2 class="h2">Every coupon takes 7 steps, then goes to <em>everyone</em>.</h2></div>
+    
+    <div class="cs-b"><div class="dd-jp" id="dd-jp">
+      <div class="jp-top"><p class="jp-k">Today’s journey</p><button type="button" class="jp-rp" data-jreplay aria-label="Replay" title="Replay"><svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.7-4"/><path d="M2.5 2.5v3h3"/></svg><span>Replay</span></button></div>
+      <ol class="dd-journey jp jq"><li class="" data-j="0"><i>1</i><span>Create a campaign</span></li><li class="" data-j="1"><i>2</i><span>Pick a template</span></li><li class="" data-j="2"><i>3</i><span>Drag in a coupon block</span></li><li class="warn" data-j="3"><b class=bub>Wait, where do I make the code?</b><i>4</i><span>Leave to make a code in Coupons</span></li><li class="" data-j="4"><i>5</i><span>Come back and select it</span></li><li class="warn" data-j="5"><b class=bub>Copy, paste… again?</b><i>6</i><span>Paste the code into the text</span></li><li class="bad" data-j="6"><b class=bub>20% off for everyone?</b><i>7</i><span>Send it to everyone</span></li></ol>
+      <div class="dp-sum jp-sum"><p class="jp-n jp-punch">Two tools, seven steps, and everyone still gets <em>20% off</em>.</p><button type="button" class="jp-btn jp-watch" data-watch><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M4.5 3v10l8-5z"/></svg>See it in the real app<small>1:44</small></button></div>
+    </div>
+    </div>
+    
+    
+  <dialog class="dd-modal" aria-label="The real flow, recorded in Klaviyo"><div class="dm-in"><div class="dm-top"><span>The real flow · setting up a Black Friday coupon in Klaviyo today</span><button type="button" data-close aria-label="Close">✕</button></div><div class="dm-cap" data-dm-cap aria-live="polite"><span class="dm-n">1 / 13</span><span class="dm-t">Create the campaign and name it</span></div><div class="dm-seg" data-dm-seg><button type="button" data-t="0" class="" title="1. Create the campaign and name it" aria-label="Jump to step 1: Create the campaign and name it"></button><button type="button" data-t="7" class="" title="2. Set up the email" aria-label="Jump to step 2: Set up the email"></button><button type="button" data-t="11" class="" title="3. Pick a template" aria-label="Jump to step 3: Pick a template"></button><button type="button" data-t="15" class="" title="4. Open the email editor" aria-label="Jump to step 4: Open the email editor"></button><button type="button" data-t="24" title="5. Leave for the Coupons tab to make a code" aria-label="Jump to step 5: Leave for the Coupons tab to make a code"></button><button type="button" data-t="30" class="" title="6. Create and configure the coupon" aria-label="Jump to step 6: Create and configure the coupon"></button><button type="button" data-t="40" title="7. Go back to the editor and refresh to find it" aria-label="Jump to step 7: Go back to the editor and refresh to find it"></button><button type="button" data-t="45" title="8. Drag in a coupon block, then dig through a cluttered coupon list" aria-label="Jump to step 8: Drag in a coupon block, then dig through a cluttered coupon list"></button><button type="button" data-t="57" class="" title="9. Write the subject line and save" aria-label="Jump to step 9: Write the subject line and save"></button><button type="button" data-t="67" class="" title="10. Review: the email is set up" aria-label="Jump to step 10: Review: the email is set up"></button><button type="button" data-t="78" class="" title="11. Now SMS: start writing the message" aria-label="Jump to step 11: Now SMS: start writing the message"></button><button type="button" data-t="84" title="12. Personalize icon, then a dropdown. Only existing coupons, no way to make a new one" aria-label="Jump to step 12: Personalize icon, then a dropdown. Only existing coupons, no way to make a new one"></button><button type="button" data-t="92" class="" title="13. The SMS has its coupon. Both messages are ready" aria-label="Jump to step 13: The SMS has its coupon. Both messages are ready"></button></div><video src="today.mp4" controls playsinline preload="none" data-rate="1.25" data-steps='[[0, "Create the campaign and name it", 0], [7, "Set up the email", 0], [11, "Pick a template", 0], [15, "Open the email editor", 0], [24, "Leave for the Coupons tab to make a code", 1], [30, "Create and configure the coupon", 0], [40, "Go back to the editor and refresh to find it", 1], [45, "Drag in a coupon block, then dig through a cluttered coupon list", 1], [57, "Write the subject line and save", 0], [67, "Review: the email is set up", 0], [78, "Now SMS: start writing the message", 0], [84, "Personalize icon, then a dropdown. Only existing coupons, no way to make a new one", 1], [92, "The SMS has its coupon. Both messages are ready", 0]]'></video></div></dialog>
+    
+    <div class="cs-b dd-biz-w"><p class="lbl">Why it mattered</p>
+      <div class="dd-biz">
+        <div><b>2021</b><p>Customers first asked for it</p></div>
+        <div><b>103M</b><p>Coupon messages sent in June</p></div>
+        <div><b>3</b><p>Competitors already ship a version</p></div>
+        <div><b>Flagship</b><p>Of Klaviyo’s Personalization add-on</p></div>
+      </div></div>
+  </section>
+
+  <section class="band hmw" aria-label="How might we">
+    <p class="lbl">How might we</p>
+    <p class="hmw-q">Help marketers give discounts only to the customers who need them, and trust it enough to turn it on?</p>
+  </section>
+
+  <section class="ch" data-chap="2" data-s="Discovery" data-d="Where competitors put it">
+    <div class="head"><p class="lbl">02 · Discovery</p><h2 class="h2">16 competitors, and most <em>hide</em> the decision in a separate tool.</h2><p class="body">I mapped each one screen by screen. None prove a discount paid off, and the best put the decision right on the email. That’s where Klaviyo’s belongs.</p></div>
+    
+    <div class="cs-b"><a class="dd-board" href="competitive-board-hd.jpg" data-zoom target="_blank" rel="noopener"><img src="competitive-board-hd.jpg" alt="FigJam board comparing 16 tools screen by screen" loading="lazy"></a></div>
+    <div class="cs-b"><p class="h3 cs-subh">Where it could live in Klaviyo</p><p class="body dd-sub">I turned those patterns into entry points across Klaviyo’s campaign flow, and brought them to my PM before the PRD was written.</p><a class="dd-board" href="concepts-board-hd.jpg" data-zoom target="_blank" rel="noopener"><img src="concepts-board-hd.jpg" alt="Five concepts for where discount affinity could live in Klaviyo" loading="lazy"></a></div>
+  </section>
+
+  <section class="band paper" data-chap="3" data-s="Concepts" data-d="Five places to step in, tested">
+    <div class="head"><p class="lbl">03 · Concepts</p><h2 class="h2">Prototyping the <em>concepts</em>.</h2><p class="body">I prototyped each entry point as a working flow, so brands could click through them instead of judging sketches.</p></div>
+    <div class="cs-b"><div class="dd-int" style="--n:5">
+        <span class="di-k" style="grid-column:1">Before the campaign</span><span class="di-k" style="grid-column:2 / span 2">Audience</span><span class="di-k" style="grid-column:4">Email and coupon</span><span class="di-k" style="grid-column:5">Review</span>
+        <div class="di-line" aria-hidden="true"><s></s></div>
+        <button type="button" data-cpt="0" style="grid-column:1" class=on><b></b><span><i>01</i>Starter segments</span><small class="cd">Ready-made segments of who needs a discount, to drop into the flows and campaigns they already run.</small></button><button type="button" data-cpt="1" style="grid-column:2"><b></b><span><i>02</i>Audience toggle</span><small class="cd">One toggle in the audience step that removes people who don’t need a discount.</small></button><button type="button" data-cpt="2" style="grid-column:3"><b></b><span><i>03</i>Segment selection</span><small class="cd">Inside the setup they already use. Turn it on and we build one-off segments for them.</small></button><button type="button" data-cpt="3" style="grid-column:4"><b></b><span><i>04</i>Coupon block toggle</span><small class="cd">Right where the coupon goes, the block decides who gets a code.</small></button><button type="button" data-cpt="4" style="grid-column:5"><b></b><span><i>05</i>Review-step nudge</span><small class="cd">A reminder before sending: these people would buy anyway. Remove them?</small></button>
+      </div><div class="dd-cv"><figure class="dc-f on" data-cptv="0"><video src="concept-1.mp4" muted loop playsinline preload="metadata"></video><figcaption><b>01 · Starter segments</b><span>Ready-made segments of who needs a discount.</span></figcaption></figure><figure class="dc-f" data-cptv="1"><video src="concept-3.mp4" muted loop playsinline preload="none"></video><figcaption><b>02 · Audience toggle</b><span>A toggle in the audience step.</span></figcaption></figure><figure class="dc-f" data-cptv="2"><video src="concept-4.mp4" muted loop playsinline preload="none"></video><figcaption><b>03 · Send to / don’t send to</b><span>Choose by hand which groups get a code.</span></figcaption></figure><figure class="dc-f" data-cptv="3"><video src="concept-5.mp4" muted loop playsinline preload="none"></video><figcaption><b>04 · Coupon block toggle</b><span>Decide right where the discount is added.</span></figcaption></figure><figure class="dc-f" data-cptv="4"><video src="concept-2.mp4" muted loop playsinline preload="none"></video><figcaption><b>05 · Review-step nudge</b><span>A prompt before send: skip low-affinity profiles?</span></figcaption></figure></div><div class="dd-cnx"><button type="button" data-cpt-next>Next concept: <b data-cpt-nl>Audience toggle</b> <span aria-hidden="true">→</span></button></div></div>
+    
+    
+    
+  </section>
+
+  <section class="ch" data-chap="4" data-s="Research" data-d="Usability tests with 8 brands">
+    <div class="head"><p class="lbl">04 · Research</p><h2 class="h2">Usability tests with 8 <em>brands</em>.</h2></div>
+    
+    
+    <div class="cs-b dd-ev"><p class="rs-ev">What brands said</p><ul class="dd-notes"><li><q>Promo for high, nothing for low</q><small>Footwear · Customer call</small></li><li><q>I can’t think of a better place for it</q><small>Usability test</small></li><li><q>Hard to find on their own</q><small>Usability test</small></li><li><q>A profile flag for segments and flows</q><small>Eyewear · Customer call</small></li><li><q>Replaces our deal-seeker segment</q><small>Home goods · Customer call</small></li><li><q>No promos for full-price shoppers</q><small>Fashion footwear · Customer call</small></li><li><q>Knows their business better than we do</q><small>Usability test</small></li><li><q>I have to be able to prove incrementality</q><small>Outdoor apparel · Customer call</small></li><li><q>See customers move between tiers</q><small>Jewelry · Customer call</small></li></ul></div><div class="dd-syn" aria-hidden="true"><span>Synthesizing to test</span></div><div class="cs-b"><div class="cs-ins dd-ins2"><div><small>Insight 01</small><p><b>Suppress, don’t select.</b> Marketers will let AI hold back a discount, but not pick who deserves one.</p></div><div><small>Insight 02</small><p><b>Trust comes before use.</b> They wanted to see the logic, and proof it worked, before turning it on.</p></div></div></div>
+    
+    
+  
+  <div class="cs-b"><p class="h3 cs-subh">Iterating the user flow</p><p class="body dd-sub">Five steps, starting with a score: a tier for each customer, based on how often they buy with a discount.</p><div class="dd-tabs"><div class="dt-nav" role="tablist"><button type="button" data-dt="0" class=on><i>01</i><span><b>Score</b><small>Four tiers, in plain words</small></span></button><button type="button" data-dt="1"><i>02</i><span><b>Configure</b><small>Works in flows with zero setup</small></span></button><button type="button" data-dt="2"><i>03</i><span><b>Activate</b><small>One toggle decides who sees the code</small></span></button><button type="button" data-dt="3"><i>04</i><span><b>Measure</b><small>Report only what we can prove</small></span></button><button type="button" data-dt="4"><i>05</i><span><b>Find it</b><small>Every coupon becomes the way in</small></span></button></div><div class="dt-panes"><div class="dt-p on" data-dtp="0"><div class="dt-why"><p><small>Why</small>Marketers act on plain tiers. A raw probability would ask them to pick a cut-off.</p><p><small>What I designed</small>Every profile gets a tier from how often its past orders used a discount: high, medium, low, or unknown.</p></div><div class="ui">
+          <div class="k-card" style="width:min(320px,100%)"><div class="k-head">New segment <span class="k-btn">Save</span></div><div class="k-body">
+            <div class="k-row"><span class="k-in">Discount affinity</span><span class="k-in">equals</span><span class="k-in sel">High ▾</span></div>
+            <div class="k-menu"><div class="k-opt on"><b>High</b><small>Buys mostly on sale</small><i>✓</i></div><div class="k-opt"><b>Medium</b><small>Sometimes uses a code</small><i></i></div><div class="k-opt"><b>Low</b><small>Buys at full price</small><i></i></div><div class="k-opt"><b>Unknown</b><small>Not enough orders yet</small><i></i></div></div>
+          </div></div></div></div><div class="dt-p" data-dtp="1"><div class="dt-why"><p><small>Why</small>Brands wanted it inside the segments and flows they already run.</p><p><small>What I designed</small>Starter segments and flow splits use the tiers, with nothing to set up.</p></div><div class="ui">
+          <div class="k-flow">
+            <div class="k-node"><small>Trigger</small>Started checkout</div><div class="k-line"></div>
+            <div class="k-node split"><small>Split</small>Discount affinity is Low</div>
+            <div class="k-br"><div><span class="k-yes">Yes</span><div class="k-node">Full-price reminder<br><span class="k-tag">No code</span></div></div><div><span class="k-no">No</span><div class="k-node">Here’s 20% off<br><span class="k-tag c">BF-20OFF</span></div></div></div>
+          </div></div></div><div class="dt-p" data-dtp="2"><div class="dt-why"><p><small>Why</small>The discount is decided on the coupon, so the control belongs there too.</p><p><small>What I designed</small>One toggle on the coupon decides who sees the code. Full price buyers get the same message without it.</p></div><div class="ui">
+          <div class="dd-aud">
+            <div class="k-card k-mini"><span class="who">High affinity sees</span><div class="k-cp"><small>Your code</small><b>BF-20OFF</b></div></div>
+            <div class="k-card k-mini off"><span class="who">Low affinity sees</span><div class="k-cp none"><small>Same email,</small><b>no coupon</b></div></div>
+          </div>
+        </div></div><div class="dt-p" data-dtp="3"><div class="dt-why"><p><small>Why</small>“I have to be able to prove incrementality.” Nothing is claimed before the data supports it.</p><p><small>What I designed</small>A held-back group shows codes used by tier, and lift once it’s proven.</p></div><div class="ui">
+          <div class="k-card k-an" style="width:min(380px,100%)"><div class="k-head">Last 30 days <span class="k-ctl">30% control</span></div><div class="grid"><div><small>Orders with a code · High</small><b>68.5%</b></div><div><small>Orders with a code · Low</small><b>6.7%</b></div><div><small>Lift</small><b style="font-size:.8rem;color:var(--warm);font-weight:500;margin-top:8px">Coming soon</b></div></div></div>
+        </div></div><div class="dt-p" data-dtp="4"><div class="dt-why"><p><small>Why</small>In sessions it was hard to find on its own. Every coupon becomes the way in.</p><p><small>What I designed</small>Discount affinity sits under every coupon, in email and SMS.</p></div><div class="ui dt-wide"><div class="dd-ba">
+        <figure class="after"><img src="sms-after.jpg" alt="SMS editor: coupon chip with codes and expiry, and discount affinity below" loading="lazy"><figcaption class="cap">Discount affinity sits under every coupon.</figcaption></figure>
+      </div></div></div></div></div></div>
+  </section>
+
+  <section class="band ink" data-chap="5" data-s="Solution" data-d="One toggle decides who gets a code">
+    <div class="head"><p class="lbl">05 · Solution</p><h2 class="h2">One toggle, right on the <em>coupon</em>.</h2><p class="body">The final designs, built with Klaviyo’s real components. Click around: every screen below works.</p></div>
+    <div class="cs-b dd-pt" id="dd-pt">
+      <div class="pt-tabs" role="tablist"><button type="button" role="tab" data-pt="0" class=on aria-selected=true><b>SMS</b><small>Add a coupon, then give each segment its own.</small></button><button type="button" role="tab" data-pt="1"><b>Email</b><small>Drag in a Coupon block, then turn on Discount affinity.</small></button><button type="button" role="tab" data-pt="2"><b>Flows</b><small>Split an abandoned checkout by discount affinity.</small></button><button type="button" role="tab" data-pt="3"><b>Insights</b><small>See who needs a discount, and what discounts cost you.</small></button></div>
+      <div class="lx pt-lx"><div class="lx-screen"><div class="pt-app"><iframe title="SMS prototype" data-src="proto/Discount%20Affinity%20in%20SMS.dc.html?step=1&amp;view=breakdown" data-pf="0" loading="lazy" class=on></iframe><iframe title="Email prototype" data-src="proto/Discount%20Affinity%20in%20Email.dc.html" data-pf="1" loading="lazy"></iframe><iframe title="Flows prototype" data-src="proto/Flows%20-%20Abandoned%20Checkout.dc.html" data-pf="2" loading="lazy"></iframe><iframe title="Insights prototype" data-src="proto/DAff%20Hub%20+%20PLG.dc.html" data-pf="3" loading="lazy"></iframe><div class="pt-load">Loading the prototype…</div><div class="pt-guide" aria-live="polite"><i class="pg-ring"></i><i class="pg-ghost"></i><div class="pg-tip"><small data-pg-n></small><b data-pg-t></b></div></div></div></div><div class="lx-base"></div></div>
+      <div class="pt-foot"><button type="button" class="pt-restart" data-pg-restart>↺ Restart the guide</button><a class="pt-full" href="proto/Discount%20Affinity%20in%20SMS.dc.html?step=1&amp;view=breakdown" target="_blank" rel="noopener">Open full screen ↗</a></div>
+    </div>
+  </section>
+
+  <section class="ch outcome" data-chap="6" data-s="Outcome" data-d="Live in beta, ready to prove it">
+    <div class="head"><p class="lbl">06 · Outcome</p><h2 class="h2">Live in beta with <em>254</em> companies.</h2><p class="body">Here’s what we’re measuring, and what would make me call it a win:</p><p class="body">We’re looking for at least a 2% relative lift in order rate versus a matched control, read across the beta cohort against each account’s own baseline.</p></div>
+  </section>
+</article>
+</template>
+
+<script src="content.js"></script>
+<script src="answers.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
