@@ -1,0 +1,39 @@
+:root{
+  color-scheme:light;
+  --ink:#2A2029; --ink-70:rgba(42,32,41,.68); --ink-50:rgba(42,32,41,.5);
+  --body:rgba(42,32,41,.62); --muted:rgba(42,32,41,.53); --faint:rgba(42,32,41,.42);
+  --accent:#9C6B14; --accent-06:rgba(156,107,20,.06); --accent-12:rgba(156,107,20,.12); --accent-25:rgba(156,107,20,.25);
+  --page:#F5F1E8; --surface:#ECE8DC; --line:rgba(42,32,41,.1); --line-2:rgba(42,32,41,.16); --white:#fff;
+  --sans:"Geist",-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"Geist Mono",SFMono-Regular,Consolas,ui-monospace,monospace;
+  /* colour roles (W2-03): today's values, unchanged (D7). Nila's colour pass edits these. */
+  --ink-rgb:42,32,41; --white-rgb:255,255,255; --accent-rgb:156,107,20; --plum-rgb:59,40,64;
+  --gold-rgb:237,193,99; --black-rgb:0,0,0;         /* for rgba(var(--ink-rgb),.08) and friends */
+  --plum:#3B2840;                                    /* the ink band, .band.hmw, --ink2 in case studies */
+  --gold-on-dark:#EDC163;                            /* labels and accents on the plum band */
+  --on-dark:#fff; --on-dark-body:rgba(255,255,255,.62); --on-dark-muted:rgba(255,255,255,.6);
+  --page-from:#F3EEE3; --page-to:#F0ECE0;            /* body gradient: --page-from → --page → --page-to */
+  --band-tint:#E7D9C4;                               /* .dd .band.tint (the !important rule wins) */
+  --paper:#FFFFFF;                                   /* .dd .band.paper */
+  --muted-case:rgba(42,32,41,.66); --faint-case:rgba(42,32,41,.6); /* .dd overrides of --muted, --faint */
+  /* type (W2-04): 7 roles at TODAY's sizes (O7b: keep the current sizes). Variants keep today's exceptions. */
+  --fs-h1:clamp(2.4rem,6vw,3.6rem);    --fw-h1:400; --lh-h1:1.2;  --tr-h1:-.035em;  /* case-study hero title */
+  --fs-h1-home:clamp(1.8rem,5vw,2.25rem);           --lh-h1-home:1.3; --tr-h1-home:-.02em; /* home headline */
+  --fs-h2:clamp(1.75rem,3.6vw,2.5rem); --fw-h2:400; --lh-h2:1.15; --tr-h2:-.03em;   /* chapter headlines */
+  --fs-h3:1.05rem;      --fw-h3:500; --lh-h3:1.35; --tr-h3:-.01em;   /* sub-heads */
+  --fs-h4:1rem;         --fw-h4:500; --lh-h4:1.6;  --tr-h4:-.015em;  /* row and card titles */
+  --fs-body:1.05rem;    --fw-body:400; --lh-body:1.65; --tr-body:0;  /* case-study reading text */
+  --fs-body-home:1rem;                 --lh-body-home:1.6;           /* home intro line */
+  --fs-body-s:.9rem;    --fw-body-s:400; --lh-body-s:1.5; --tr-body-s:0; /* row descriptions */
+  --fs-caption:.8rem;   --fw-caption:400; --lh-caption:1.5; --tr-caption:0; /* mono labels, case studies */
+  --fs-caption-ui:.75rem;              --lh-caption-ui:1.6;          /* mono nav and footer */
+  --tr-label:.02em;                                                  /* chapter labels (.lbl) */
+  /* radii (W2-05): 6 steps replace today's 51 values (mapping in README.md). 50% stays for circles. */
+  --r-xs:4px; --r-sm:6px; --r-md:10px; --r-lg:14px; --r-xl:20px; --r-pill:99px;
+  /* motion (W2-02): 5 durations, 4 easings; `linear` only for progress bars */
+  --d-1:120ms; --d-2:200ms; --d-3:320ms; --d-4:450ms; --d-5:520ms;
+  --ease-out:cubic-bezier(.22,.61,.36,1); --ease-emph:cubic-bezier(.16,.84,.3,1);
+  --ease-inout:cubic-bezier(.65,0,.25,1); --spring:cubic-bezier(.34,1.4,.64,1);
+  --ease:var(--ease-out); /* alias, kept for existing rules */
+}
+:root{--holly:#9C6B14; --holly-08:rgba(156,107,20,.08)}
