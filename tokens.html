@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design tokens · local preview</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/site.css">
+<style>
+  /* page chrome for this preview only: tk- prefix, so nothing here leaks into the site */
+  .tk{max-width:1040px; margin:0 auto; padding:56px 20px 96px; position:relative; z-index:1}
+  .tk h1{font-size:var(--fs-h1-home); line-height:var(--lh-h1-home); letter-spacing:var(--tr-h1-home); font-weight:400; margin:0 0 8px}
+  .tk-lede{color:var(--ink-70); max-width:62ch; margin:0}
+  .tk-sec{margin-top:72px}
+  .tk-sec > h2{font-size:var(--fs-h3); font-weight:var(--fw-h3); letter-spacing:var(--tr-h3); margin:0 0 6px}
+  .tk-sec > p{color:var(--ink-70); margin:0 0 22px; max-width:66ch}
+  .tk-k{font-family:var(--mono); font-size:var(--fs-caption-ui); color:var(--ink-70)}
+  .tk-card{background:var(--paper); border-radius:var(--r-lg); box-shadow:inset 0 0 0 1px var(--line); padding:22px}
+  .tk-row{display:grid; grid-template-columns:200px 1fr; gap:20px; align-items:baseline; padding:16px 0; border-top:1px solid var(--line)}
+  .tk-row:first-child{border-top:0}
+  .tk-spec{font-family:var(--mono); font-size:var(--fs-caption-ui); line-height:1.6; color:var(--ink-70)}
+  .tk-spec b{display:block; color:var(--ink); font-weight:500}
+  .tk-sample{min-width:0; overflow-wrap:anywhere}
+  .tk-btn{font:500 var(--fs-caption-ui)/1 var(--mono); color:var(--ink); background:var(--white); border:0; box-shadow:inset 0 0 0 1px var(--line-2); border-radius:var(--r-pill); padding:8px 14px; cursor:pointer; transition:box-shadow var(--d-1) var(--ease-out), background var(--d-1) var(--ease-out)}
+  .tk-btn:hover{box-shadow:inset 0 0 0 1px var(--accent)}
+  .tk-btn:focus-visible,.tk-sw:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .tk-track{position:relative; height:28px; border-radius:var(--r-pill); background:var(--surface); overflow:hidden}
+  .tk-dot{position:absolute; top:4px; left:4px; width:20px; height:20px; border-radius:50%; background:var(--accent)}
+  .tk-track.go .tk-dot{transform:translateX(calc(var(--tw) - 28px))}
+  .tk-mo{display:grid; grid-template-columns:200px 1fr auto; gap:16px; align-items:center; padding:12px 0; border-top:1px solid var(--line)}
+  .tk-mo:first-child{border-top:0}
+  .tk-curve{width:44px; height:44px; flex:none}
+  .tk-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px}
+  .tk-sw{border-radius:var(--r-md); overflow:hidden; box-shadow:inset 0 0 0 1px var(--line); background:var(--paper)}
+  .tk-chip{height:64px}
+  .tk-sw div.tk-meta{padding:10px 12px 12px}
+  .tk-sw b{display:block; font:500 var(--fs-caption-ui)/1.5 var(--mono); color:var(--ink)}
+  .tk-sw code{font:var(--fs-caption-ui)/1.5 var(--mono); color:var(--ink-70); overflow-wrap:anywhere}
+  .tk-cr{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px}
+  .tk-cr span{font:var(--fs-caption-ui)/1 var(--mono); padding:5px 7px; border-radius:var(--r-xs); background:var(--surface); color:var(--ink)}
+  .tk-cr span.fail{box-shadow:inset 0 0 0 1px var(--bad, #B54545)}
+  .tk-cr span.fail::after{content:" ✕"}
+  .tk-radii{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px}
+  .tk-radii div{height:96px; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line-2); display:flex; align-items:flex-end; padding:10px; font:var(--fs-caption-ui)/1.4 var(--mono); color:var(--ink)}
+  .tk-frames{display:grid; grid-template-columns:1.8fr 1fr; gap:40px; align-items:center}
+  .tk-ph{position:absolute; inset:0; display:grid; place-items:center; font:var(--fs-caption-ui)/1.4 var(--mono); color:#6A707A; text-align:center; padding:12px}
+  .tk-band{background:var(--plum); color:var(--on-dark); border-radius:var(--r-lg); padding:28px 24px; margin-top:14px}
+  .tk-band .tk-lbl{color:var(--gold-on-dark)}
+  .tk-band .tk-body{color:var(--on-dark-body)}
+  .tk-lbl{font-family:var(--mono); font-size:var(--fs-caption); letter-spacing:var(--tr-label); color:var(--accent); margin:0 0 14px}
+  .tk-h2{font-size:var(--fs-h2); font-weight:var(--fw-h2); line-height:var(--lh-h2); letter-spacing:var(--tr-h2); margin:0 0 14px; max-width:22ch}
+  .tk-body{font-size:var(--fs-body); line-height:var(--lh-body); color:var(--body); margin:0; max-width:52ch}
+  .tk-cap{font-family:var(--mono); font-size:var(--fs-caption); line-height:var(--lh-caption); color:var(--faint-case); margin:10px 0 0}
+  .tk-note{font:var(--fs-caption-ui)/1.6 var(--mono); color:var(--ink-70); margin-top:14px}
+  @media (max-width:700px){
+    .tk-row,.tk-mo{grid-template-columns:1fr; gap:8px}
+    .tk-frames{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<main class="tk" id="top">
+  <h1>Design tokens</h1>
+  <p class="tk-lede">Local preview of <span class="tk-k">styles/tokens.css</span>, not linked from the site. Every value on this page is read from the tokens, so it changes when they do. Type keeps today's sizes (O7b) and colours keep today's values (D7).</p>
+
+  <section class="tk-sec" aria-labelledby="s-type">
+    <h2 id="s-type">Type · today's sizes</h2>
+    <p>Seven roles, at the sizes the site renders today. Variants keep today's exceptions until the visual pass. Sizes in px are at 1440 wide, then 390.</p>
+    <div class="tk-card" id="type-rows"></div>
+
+    <p style="margin-top:28px">A case-study chapter in these roles, on the page and on the plum band. The text is from <span class="tk-k">#send-time</span>.</p>
+    <div class="tk-card">
+      <p class="tk-lbl">01 · Problem</p>
+      <h3 class="tk-h2">Every way to send treated the list as one audience.</h3>
+      <p class="tk-body">Beta launched to 85 companies. The first report led with one big number, and customers asked: compared to what? Most of the design came from working out how the data should tell its story.</p>
+      <p class="tk-cap">Caption · Geist Mono</p>
+    </div>
+    <div class="tk-band">
+      <p class="tk-lbl">01 · Problem</p>
+      <h3 class="tk-h2">Every way to send treated the list as one audience.</h3>
+      <p class="tk-body">Beta launched to 85 companies. The first report led with one big number, and customers asked: compared to what? Most of the design came from working out how the data should tell its story.</p>
+    </div>
+  </section>
+
+  <section class="tk-sec" aria-labelledby="s-motion">
+    <h2 id="s-motion">Motion</h2>
+    <p>Five durations and four easings. Press Play to see each one. Durations play on <span class="tk-k">--ease-out</span>, and easings play at <span class="tk-k">--d-5</span>.</p>
+    <div class="tk-card" id="mo-dur"></div>
+    <div class="tk-card" id="mo-ease" style="margin-top:14px"></div>
+    <p class="tk-note" id="rm-note" hidden>Your system asks for reduced motion. On the site, motion ends in its final state; here the demos still play, because you start them.</p>
+  </section>
+
+  <section class="tk-sec" aria-labelledby="s-colour">
+    <h2 id="s-colour">Colour · today's values</h2>
+    <p>Reference only: no new colours, and no value changes (D7). Each text token shows its measured contrast on the page, the tint band, paper and the plum band. ✕ marks anything under 4.5:1. These failures wait for Nila's colour pass.</p>
+    <div class="tk-grid" id="sw"></div>
+  </section>
+
+  <section class="tk-sec" aria-labelledby="s-radii">
+    <h2 id="s-radii">Radii</h2>
+    <p>Six steps replace today's 51 values. The mapping table is in <span class="tk-k">styles/README.md</span>. Circles keep <span class="tk-k">50%</span>.</p>
+    <div class="tk-radii" id="radii"></div>
+  </section>
+
+  <section class="tk-sec" aria-labelledby="s-frames">
+    <h2 id="s-frames">Device frames</h2>
+    <p>Two frames replace today's five phone and laptop styles: <span class="tk-k">.frame-laptop</span> and <span class="tk-k">.frame-phone</span>.</p>
+    <div class="tk-frames">
+      <div class="frame-laptop"><div class="frame-screen"><div class="frame-view"><div class="tk-ph">.frame-laptop<br>16 : 10 screen</div></div></div><div class="frame-base"></div></div>
+      <div class="frame-phone" style="margin:0 auto"><div class="frame-view"><div class="tk-ph">.frame-phone<br>9 : 17 screen</div></div></div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  const root=getComputedStyle(document.documentElement), tok=n=>root.getPropertyValue(n).trim();
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  /* ---- type ---- */
+  const TYPE=[
+    ['H1','h1','Case-study hero title','Every way to send'],
+    ['H1 · home variant','h1-home','Home headline',"Hey, I'm Nila"],
+    ['H2','h2','Chapter headline','Every way to send treated the list as one audience.'],
+    ['H3','h3','Sub-head','How the data should tell its story (specimen)'],
+    ['H4','h4','Row and card titles','Personalized Send Time'],
+    ['Body','body','Case-study reading text','Beta launched to 85 companies. The first report led with one big number, and customers asked: compared to what?'],
+    ['Body · home variant','body-home','Home intro line','Beta launched to 85 companies.'],
+    ['Body Small','body-s','Row descriptions','Beta launched to 85 companies.'],
+    ['Caption','caption','Mono labels in case studies','01 · Problem'],
+    ['Caption · UI variant','caption-ui','Nav and footer','All projects · About'],
+  ];
+  const mono=k=>k.startsWith('caption');
+  const pick=(k,p,dflt)=>tok(`--${p}-${k}`)||(k.includes('-')?tok(`--${p}-${k.split('-')[0]}`):'')||dflt;
+  document.getElementById('type-rows').innerHTML=TYPE.map(([name,k,use,txt])=>{
+    const fs=tok('--fs-'+k), fw=pick(k,'fw','400'), lh=pick(k,'lh','1.5'), tr=pick(k,'tr','0');
+    const style=`font-size:var(--fs-${k});font-weight:${fw};line-height:${lh};letter-spacing:${tr};font-family:var(${mono(k)?'--mono':'--sans'})`;
+    return `<div class="tk-row"><div class="tk-spec"><b>${esc(name)}</b>${esc(use)}<br>--fs-${k}: ${esc(fs)}<br>weight ${esc(fw)} · line ${esc(lh)} · tracking ${esc(tr)}<br><span data-px="${k}"></span></div><div class="tk-sample" style="${style}">${esc(txt)}</div></div>`;
+  }).join('');
+  // px at 1440 and 390, computed from the clamp() with the viewport set to each width
+  const probe=document.createElement('div'); probe.style.cssText='position:absolute;visibility:hidden'; document.body.appendChild(probe);
+  const remPx=parseFloat(getComputedStyle(document.documentElement).fontSize)||16;
+  const at=(expr,vw)=>{ const e=expr.replace(/(\d*\.?\d+)vw/g,(m,n)=>(n*vw/100)+'px').replace(/(\d*\.?\d+)rem/g,(m,n)=>(n*remPx)+'px'); probe.style.fontSize=e; return parseFloat(getComputedStyle(probe).fontSize); };
+  document.querySelectorAll('[data-px]').forEach(el=>{ const e=tok('--fs-'+el.dataset.px); const a=at(e,1440), b=at(e,390); el.textContent=(a===b?`${+a.toFixed(1)}px`:`${+a.toFixed(1)}px → ${+b.toFixed(1)}px`); });
+
+  /* ---- motion ---- */
+  const DUR=[['--d-1','press, hover colour, caret, chip, intent delay'],['--d-2','tooltips, tab underline, small fades, row close'],['--d-3','row expand, pane swap, dots, carousel indicator'],['--d-4','block reveal, ngUp / ngStream, modal, ring move'],['--d-5','the ceiling: open-case camera move, hero entrance']];
+  const EASE=[['--ease-out','default enter and exit'],['--ease-emph','big spatial moves: open-case, reveals, row expand, ring'],['--ease-inout','symmetric slides only: carousel, tab content'],['--spring','pops only: jpPop, psPop, the search mark']];
+  const curve=v=>{ const m=v.match(/cubic-bezier\(([^)]+)\)/); if(!m) return ''; const [a,b,c,d]=m[1].split(',').map(Number); const Y=y=>40-y*32, X=x=>4+x*36;
+    return `<svg class="tk-curve" viewBox="0 0 44 44" aria-hidden="true"><path d="M4 40 L40 8" stroke="var(--line-2)" fill="none"/><path d="M${X(0)} ${Y(0)} C${X(a)} ${Y(b)} ${X(c)} ${Y(d)} ${X(1)} ${Y(1)}" stroke="var(--accent)" stroke-width="2" fill="none"/></svg>`; };
+  const row=(name,use,dur,ease,extra)=>`<div class="tk-mo"><div class="tk-spec"><b>${name}</b>${esc(tok(name))}<br>${esc(use)}</div><div style="display:flex;gap:12px;align-items:center;min-width:0">${extra||''}<div class="tk-track" style="flex:1" data-d="${dur}" data-e="${ease}"><span class="tk-dot"></span></div></div><button class="tk-btn" type="button" aria-label="Play ${name}">Play</button></div>`;
+  document.getElementById('mo-dur').innerHTML=DUR.map(([n,u])=>row(n,u,n,'--ease-out')).join('');
+  document.getElementById('mo-ease').innerHTML=EASE.map(([n,u])=>row(n,u,'--d-5',n,curve(tok(n)))).join('');
+  document.querySelectorAll('.tk-mo .tk-btn').forEach(b=>b.addEventListener('click',()=>{
+    const t=b.closest('.tk-mo').querySelector('.tk-track'), dot=t.querySelector('.tk-dot');
+    t.style.setProperty('--tw',t.clientWidth+'px');
+    dot.style.transition='none'; t.classList.remove('go'); void dot.offsetWidth;
+    dot.style.transition=`transform var(${t.dataset.d}) var(${t.dataset.e})`; t.classList.add('go');
+  }));
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) document.getElementById('rm-note').hidden=false;
+
+  /* ---- colour ---- */
+  const toRGBA=v=>{ probe.style.color=''; probe.style.color=v; const m=getComputedStyle(probe).color.match(/[\d.]+/g)||[0,0,0]; return {r:+m[0],g:+m[1],b:+m[2],a:m[3]===undefined?1:+m[3]}; };
+  const over=(f,b)=>({r:f.r*f.a+b.r*(1-f.a),g:f.g*f.a+b.g*(1-f.a),b:f.b*f.a+b.b*(1-f.a),a:1});
+  const L=c=>{ const ch=v=>{v/=255; return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}; return .2126*ch(c.r)+.7152*ch(c.g)+.0722*ch(c.b); };
+  const ratio=(f,b)=>{ const c=over(f,b), x=L(c), y=L(b); return (Math.max(x,y)+.05)/(Math.min(x,y)+.05); };
+  const BG={page:'--page',tint:'--band-tint',paper:'--paper'}, DARK={plum:'--plum'};
+  const SW=[
+    ['--ink','Headlines, titles','light'],['--ink-70','Secondary text','light'],['--body','Reading text','light'],['--muted','Meta text','light'],['--faint','Captions, footer','light'],['--ink-50','Dim text','light'],
+    ['--muted-case','--muted inside case studies','light'],['--faint-case','--faint inside case studies','light'],['--accent','Labels, links, rings','light'],
+    ['--on-dark','Text on the plum band','dark'],['--on-dark-body','Reading text on the band','dark'],['--on-dark-muted','Meta text on the band','dark'],['--gold-on-dark','Labels on the band','dark'],
+    ['--page','Page background','bg'],['--page-from','Page gradient start','bg'],['--page-to','Page gradient end','bg'],['--band-tint','Tint band','bg'],['--paper','Paper band','bg'],['--surface','Chips, wells','bg'],['--plum','Plum band, --ink2','bg'],
+    ['--line','Hairlines','bg'],['--line-2','Stronger hairlines','bg'],['--accent-06','Accent wash','bg'],['--accent-12','Accent wash','bg'],['--accent-25','Accent wash','bg'],
+  ];
+  document.getElementById('sw').innerHTML=SW.map(([n,use,kind])=>{
+    const v=tok(n), f=toRGBA(v); let cr='';
+    const set=kind==='light'?BG:kind==='dark'?DARK:null;
+    if(set) cr='<div class="tk-cr">'+Object.entries(set).map(([k,bn])=>{ const r=ratio(f,toRGBA(tok(bn))); return `<span class="${r<4.5?'fail':''}" title="${esc(n)} on ${esc(bn)}">${k} ${r.toFixed(2)}</span>`; }).join('')+'</div>';
+    const chipBg=kind==='bg'?v:(kind==='dark'?`var(--plum)`:'var(--page)');
+    const chip=kind==='bg'?`<div class="tk-chip" style="background:${esc(v)}"></div>`:`<div class="tk-chip" style="background:${chipBg};display:flex;align-items:center;padding:0 14px;font-size:var(--fs-body);color:${esc(v)}">Aa · ${esc(use)}</div>`;
+    return `<div class="tk-sw">${chip}<div class="tk-meta"><b>${esc(n)}</b><code>${esc(v)}</code>${kind==='bg'?`<br><code>${esc(use)}</code>`:''}${cr}</div></div>`;
+  }).join('');
+
+  /* ---- radii ---- */
+  const R=[['--r-xs','bars, tags, ticks'],['--r-sm','inner screens, small chips'],['--r-md','buttons, menus, mock cards'],['--r-lg','cards, rows, media'],['--r-xl','panels, stages, search box'],['--r-pill','pills, toggles']];
+  document.getElementById('radii').innerHTML=R.map(([n,u])=>`<div style="border-radius:var(${n})">${n}<br>${esc(tok(n))}<br>${esc(u)}</div>`).join('');
+})();
+</script>
+</body>
+</html>
